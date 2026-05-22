@@ -248,7 +248,8 @@ img { max-width: 100%; display: block; }
 .contact-form input:focus, .contact-form textarea:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(59,130,246,0.15); }
 .form-feedback { min-height: 22px; color: var(--muted); }
 
-.footer { text-align: center; padding: 35px 20px; color: var(--muted); border-top: 1px solid var(--border); }
+.footer { text-align: center; padding: 35px 20px; color: var(--muted); border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+.footer-credit { text-align: right; opacity: 0.5; font-size: 0.9rem; color: var(--muted); flex: 1; min-width: 200px; }
 
 .reveal { opacity: 0; transform: translateY(35px); transition: 0.8s ease; }
 .reveal.visible { opacity: 1; transform: translateY(0); }
