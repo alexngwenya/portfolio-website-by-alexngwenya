@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>About - Portfolio Template</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+<style>
+    /* ABOUT PAGE */
+
+.about-page {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding-top: 95px;
+}
+
+.about-hero {
+  min-height: 75vh;
+  padding: 40px 0 70px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.about-intro,
+.about-block {
+  padding: 32px;
+}
+
+.about-intro p,
+.about-block p {
+  margin: 0;
+}
+
+.about-image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-neon-ring {
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  padding: 8px;
+  background: conic-gradient(#3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  animation: rotateGlow 5s linear infinite, glowPulse 3s ease-in-out infinite;
+  box-shadow: 0 0 55px rgba(139, 92, 246, 0.75);
+}
+
+.about-neon-ring img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 8px solid #0f172a;
+  object-fit: cover;
+  animation: reverseRotate 5s linear infinite;
+}
+
+.about-intro h1 {
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  margin: 12px 0 18px;
+  background: linear-gradient(90deg, #f8fafc, #3b82f6, #ec4899);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.about-intro p {
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+.about-details {
+  padding: 20px 8% 90px;
+  display: grid;
+  gap: 28px;
+}
+
+.about-block h2 {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+  color: #f8fafc;
+}
+
+.about-block h2 i {
+  color: #3b82f6;
+  margin-right: 10px;
+}
+
+.about-block p {
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+.skill-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.skill-list span {
+  padding: 10px 16px;
+  border-radius: 999px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+}
+
+.timeline {
+  display: grid;
+  gap: 20px;
+}
+
+.timeline-item {
+  padding-left: 22px;
+  border-left: 3px solid #3b82f6;
+}
+
+ul {
+  padding-left: 20px;
+  color: #cbd5e1;
+  line-height: 1.8;
+}
+
+.timeline-item h3 {
+  margin-bottom: 8px;
+  color: #f8fafc;
+}
+
+.cert-grid {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.cert-card {
+  padding: 18px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.cert-card iframe {
+  width: 100%;
+  height: 420px;
+  border: none;
+  border-radius: 16px;
+  background: white;
+}
+
+.cert-card h3 {
+  margin: 15px 0 10px;
+}
+
+.cert-card a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.cert-card a:hover {
+  color: #ec4899;
+}
+
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverseRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* ABOUT RESPONSIVE */
+
+@media (max-width: 992px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .cert-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-page {
+    padding-top: 85px;
+  }
+
+  .about-hero {
+    padding-top: 35px;
+    min-height: auto;
+  }
+
+  .about-neon-ring {
+    width: 270px;
+    height: 270px;
+  }
+
+  .cert-card iframe {
+    height: 360px;
+  }
+}
+</style>
+
+</head>
+<body>
+
+ <header class="site-header" id="navbar">
+    <div class="brand" id=""></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="about-page">
+
+    <section class="about-hero">
+      <div class="about-image-box">
+        <div class="about-neon-ring">
+          <img src="assets/images/profile 2.jpg" alt="Profile" id="aboutProfileImage" />
+        </div>
+      </div>
+
+      <div class="about-intro glass-card">
+        <p class="intro">Get To Know Me</p>
+        <h1 id="aboutHeading">About Me</h1>
+        <p>
+          I am a developer, problem solver, and founder focused on building modern digital solutions that help people and businesses work better.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-details">
+
+      <article class="glass-card about-block">
+        <h2><i class="fa-solid fa-user"></i> Biography</h2>
+        <p id="biographyText">
+          <p id="bioText">This is your biography section. Edit Script/profile.js to add your own background, education, experience, and story.
+
+            type additional text here
+        </p>
+      </article>
+
+      <article class="glass-card about-block">
+        <h2><i class="fa-solid fa-code"></i> My Skills</h2>
+
+        <div class="skill-list">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>Responsive Design</span>
+          <span>Problem Solving</span>
+          <span>Communication</span>
+          <span>Project Management</span>
+          <span>Collaboration</span>
+        </div>
+      </article>
+
+      <article class="glass-card about-block">
+        <h2><i class="fa-solid fa-briefcase"></i> Experience</h2>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <h3>Senior Developer</h3>
+            <h5>Demo Company</h5>
+            <p>
+              <ul>
+                <li>Built responsive web applications using HTML5, CSS3, and JavaScript</li>
+                <li>Collaborated with design and product teams to deliver user-focused solutions</li>
+                <li>Optimized website performance and accessibility standards</li>
+                <li>Mentored junior developers on best practices</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Frontend Developer Intern</h3>
+            <h5>Demo Tech Startup</h5>
+            <p>
+              <ul>
+                <li>Developed and maintained responsive web interfaces</li>
+                <li>Worked with APIs and integrated backend services</li>
+                <li>Participated in code reviews and improved coding practices</li>
+                <li>Contributed to cross-functional projects</li>
+              </ul>
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Freelance Web Developer</h3>
+            <h5>Self-Employed</h5>
+            <p>
+              <ul>
+                <li>Designed and developed custom websites for small businesses and startups</li>
+                <li>Managed client relationships and project timelines</li>
+                <li>Implemented SEO-friendly and mobile-responsive designs</li>
+                <li>Provided ongoing maintenance and support</li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-card about-block">
+        <h2><i class="fa-solid fa-graduation-cap"></i> Education & Certifications</h2>
+
+        <p>
+          Continuous learning and professional development through courses, certifications, and hands-on projects. Add your own certificates and achievements here.
+        </p>
+
+        <div class="cert-grid">
+          <div class="cert-card">
+            <h3>Demo Professional Certification</h3>
+            <p>Replace this with your actual certification. Add certificate images or PDFs in assets/docs/</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              View Certificate
+            </a>
+          </div>
+
+          <div class="cert-card">
+            <h3>Demo Advanced Course</h3>
+            <p>Replace this with your completed courses and achievements. Update in about.html</p>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              View Certificate
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass-card about-block">
+        <h2><i class="fa-solid fa-heart"></i> Hobbies</h2>
+
+        <div class="skill-list">
+          <span>📚 Reading & Learning</span>
+          <span>💻 Coding & Programming</span>
+          <span>🎨 Design & Creativity</span>
+          <span>🚀 Innovation & Problem Solving</span>
+          <span>🎮 Gaming & Strategy</span>
+          <span>🌍 Traveling & Exploring</span>
+        </div>
+      </article>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p id="footerText"></p>
+  </footer>
+
+  <script src="Script/profile.js"></script>
+  <script src="Script/about.js"></script>
+</body>
+</html>

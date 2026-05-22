@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Template - Fake Person</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a2e0e9f6a7.js" crossorigin="anonymous"></script>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+/>
+</head>
+<body>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+
+  <header class="site-header" id="navbar">
+    <div class="brand" id="brandText">Welcome!</div>
+    <nav class="nav-links" id="navLinks">
+      <a href="#hero">Home</a>
+      <a href="about.html">About</a>
+      <a href="#services">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero section" id="hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow">Hello, I am</p>
+        <h1 id="fullName">Your Name</h1>
+        <h2 id="title"></h2>
+        <p class="about" id="about">
+        </p>
+        <div class="hero-actions">
+          <a class="btn primary" id="resumeBtn" href="#" download>Download Resume</a>
+          <span class="form-feedback" id="cvFeedback" aria-live="polite"></span>
+          <a class="btn secondary" href="projects.html">My Work</a>
+          <a class="btn ghost" href="#contact">Contact Me</a>
+        </div>
+        <div class="socials" id="socialLinks"></div>
+      </div>
+
+      <div class="hero-image reveal">
+        <div class="speech-bubble">Available Now!</div>
+        <div class="profile-ring">
+          <img id="profileImage" src="assets/images/profile 2.jpg" alt="Profile image" />
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section reveal" id="services">
+      <div class="section-heading">
+        <p class="eyebrow">Services</p>
+        <h2>What I Do</h2>
+      </div>
+      <div class="card-grid" id="servicesGrid"></div>
+    </section>
+
+    <section class="section contact-section reveal" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">Contact</p>
+        <h2>Connect with me</h2>
+      </div>
+      <div class="contact-wrapper">
+        <div class="contact-info glass-card">
+          <h3>Let's Connect</h3>
+          <p id="contactText">I'm always open to new opportunities, collaborations, and interesting projects. Feel free to reach out!</p>
+          <p><strong>Email:</strong> <span id="emailText"></span></p>
+          <p><strong>Location:</strong> <span id="locationText"></span></p>
+          <p><strong>Phone:</strong> <span id="phoneText"></span></p>
+        </div>
+        <form class="contact-form glass-card" id="contact_Form">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="subject" placeholder="Subject" required />
+          <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+          <button class="btn primary" type="submit">Send Message</button>
+          <p class="form-feedback" id="formFeedback"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p id="footerText"></p>
+  </footer>
+
+  <script src="Script/profile.js"></script>
+  <script src="Script/script.js"></script>
+</body>
+</html>

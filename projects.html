@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects & Blogs - Portfolio Template</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+<style>
+  /* PROJECTS / BLOGS GALLERY PAGE */
+
+  .project-page {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding-top: 95px;
+  }
+
+  .project-page-hero {
+    min-height: 35vh;
+    padding: 95px 0 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background:
+      radial-gradient(circle at top left, rgba(59, 130, 246, 0.28), transparent 35%),
+      radial-gradient(circle at bottom right, rgba(236, 72, 153, 0.24), transparent 35%);
+  }
+
+  .project-page-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    margin-bottom: 12px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 1.2;
+  }
+
+.gallery-section {
+  padding: 25px 0 70px;
+}
+
+.gallery-tabs {
+  width: fit-content;
+  margin: 0 auto 35px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.tab-btn {
+  padding: 13px 30px;
+  border-radius: 999px;
+  border: none;
+  background: transparent;
+  color: #f8fafc;
+  cursor: pointer;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.tab-btn i {
+  margin-right: 8px;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6, #ec4899);
+  box-shadow: 0 0 30px rgba(139, 92, 246, 0.65);
+  transform: translateY(-3px);
+}
+
+.gallery-content {
+  min-height: 290px;
+  padding: 35px 24px;
+  border-radius: 28px;
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.13);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transform: translateY(25px);
+  transition: 0.4s ease;
+}
+
+.gallery-content.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gallery-content .card-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-content .project-card {
+  padding: 18px;
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.04));
+}
+
+.gallery-content .project-card h3 {
+  color: #f8fafc;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  padding-left: 15px;
+  margin-top: 10px;
+  margin-bottom: 14px;
+}
+
+.gallery-content .project-card p {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 18px;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-left: 15px;
+}
+
+.project-link {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20x;
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 800;
+  transition: 0.3s;
+  padding-left: 15px;
+}
+
+.project-link:hover {
+  color: #ec4899;
+  transform: translateX(5px);
+}
+
+@media (max-width: 992px) {
+  .gallery-content .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-page-hero {
+    padding-top: 105px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-page-hero {
+    min-height: auto;
+    padding: 105px 8% 25px;
+  }
+
+  .gallery-section {
+    padding-top: 15px;
+  }
+
+  .gallery-tabs {
+    border-radius: 24px;
+  }
+
+  .gallery-content {
+    padding: 20px;
+  }
+
+  .gallery-content .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+</head>
+<body>
+
+ <header class="site-header" id="navbar">
+    <div class="brand" id=""></div>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="index.html#services">Services</a>
+      <a href="projects.html">Projects</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main class="project-page">
+
+  <section class="project-page-hero">
+    <h1>My Creative Gallery</h1>
+    <p>
+      Explore my featured projects, development work, ideas, and blog articles.
+    </p>
+  </section>
+
+  <section class="section gallery-section">
+  <div class="gallery-tabs">
+    <button class="tab-btn active" data-tab="projects">
+      <i class="fa-solid fa-code"></i> Projects
+    </button>
+
+    <button class="tab-btn" data-tab="blogs">
+      <i class="fa-solid fa-blog"></i> Blogs
+    </button>
+  </div>
+
+  <div id="galleryContent" class="gallery-content fade-content"></div>
+</section>
+
+  </main>
+
+  <footer class="footer">
+    <p id="footerText"></p>
+  </footer>
+
+  <script src="Script/profile.js"></script>
+  <script src="Script/gallery.js"></script>
+  <script src="Script/script.js"></script>
+</body>
+</html>
